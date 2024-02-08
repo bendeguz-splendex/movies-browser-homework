@@ -1,0 +1,88 @@
+ext {
+    versions = [
+            // Core
+            "kotlin"               : "1.8.20",
+            "ktx"                  : "1.10.1",
+
+            //Compose
+            "composeCompiler"      : "1.4.6",
+            "composeBom"           : "2023.04.00",
+            "composeActivity"      : "1.7.2",
+            "composeViewmodel"     : "2.6.1",
+            "composeNavigation"    : "2.5.3",
+            "composeMaterial"      : "1.0.1",
+
+            // Networking
+            "retrofit"             : "2.9.0",
+            "retrofitGsonConverter": "2.9.0",
+            "retrofitRxAdapter"    : "3.0.0",
+            "okhttp"               : "4.10.0",
+
+            // Flow
+            "coroutines"           : "1.6.4",
+
+            // DI
+            "dagger"               : "2.44",
+
+            // JetPack
+            "navigation"           : "2.5.3",
+            "datastore"            : "1.0.0",
+            "room"                 : "2.4.3",
+
+            // Util
+            "coil"                 : "2.4.0",
+
+            // Gson
+            "gson"                 : "2.10",
+    ]
+
+    core = [
+            "kotlin"   : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+            "ktx"      : "androidx.core:core-ktx:${versions.ktx}",
+            "appCompat": "androidx.appcompat:appcompat:${versions.appCompat}",
+            "material" : "com.google.android.material:material:${versions.material}"
+    ]
+
+    ui = [
+            "bom"        : "androidx.compose:compose-bom:${versions.composeBom}",
+            "activity"   : "androidx.activity:activity-compose:${versions.composeActivity}",
+            "navigation" : "androidx.navigation:navigation-compose:${versions.composeNavigation}",
+            "preview"    : "androidx.compose.ui:ui-tooling-preview",
+            "tooling"    : "androidx.compose.ui:ui-tooling",
+            "viewmodel"  : "androidx.lifecycle:lifecycle-viewmodel-compose:${versions.composeViewmodel}",
+            "material"   : "androidx.compose.material3:material3",
+            "coil"       : "io.coil-kt:coil:${versions.coil}",
+            "coilCompose": "io.coil-kt:coil-compose:${versions.coil}",
+    ]
+
+    navigation = [
+            "navigationFragment": "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
+            "navigationUi"      : "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+    ]
+
+    data = [
+            "retrofit"         : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+            "retrofitConverter": "com.squareup.retrofit2:converter-gson:${versions.retrofitGsonConverter}",
+            'dataStore'        : "androidx.datastore:datastore-preferences:${versions.datastore}",
+            "room"             : "androidx.room:room-runtime:${versions.room}",
+            "roomKtx"          : "androidx.room:room-ktx:${versions.room}",
+            "okhttpLogger"     : "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
+    ]
+
+    coroutines = [
+            "coroutines": "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+    ]
+
+    di = [
+            "dagger": "com.google.dagger:dagger:${versions.dagger}"
+    ]
+
+    utils = [
+            "gson": "com.google.code.gson:gson:${versions.gson}",
+    ]
+
+    annotation = [
+            "dagger": "com.google.dagger:dagger-compiler:${versions.dagger}",
+            "room"  : "androidx.room:room-compiler:${versions.room}"
+    ]
+}
